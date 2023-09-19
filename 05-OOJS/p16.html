@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>write protect the values</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        var user = {}
+
+        Object.defineProperties(user, {
+            name: {
+                value : "rau",
+                writable: true
+            },
+            Email: {
+                value : "rau",
+                writable: false
+            },
+            mobile: {
+                value : 34567890098765,
+                writable: true
+            }
+        });
+
+        console.log("Befor user : ", user);
+
+        user.name = "FAsvybniamokjh";
+        user.Email = "09876543234567;lkjhgc";
+        user.mobile = 4887654345678;
+ 
+        console.log(`after user :`, user)
+
+        document.write(`<h1> name = ${user.name}</h1>`)
+        document.write(`<h1> Email = ${user.Email}</h1>`)
+        document.write(`<h1> mobile = ${user.mobile}</h1>`)
+
+    </script>
+</body>
+</html>

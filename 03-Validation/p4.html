@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+
+<body>
+
+    <section class="contact-form">
+        <form action="" autocomplete="off" id="contact-form">
+            <table>
+                <caption>
+                    <h1>Contact Form</h1>
+                </caption>
+                <tr>
+                    <td><label for="fullName">Full Name</label><br>
+                        <input type="text" name="fullName" id="fullName" onkeyup="validateName()">
+                        <p id="fullNameError"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="emailId">Email id</label><br>
+                        <input type="text" name="emailId" id="emailId" onkeyup="validateEmail()">
+                        <p id="emailIdError"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mobNum">Mobile number</label><br>
+                        <input type="number" name="mobNum" id="mobNum" onkeyup="validateMobNum()">
+                        <p id="mobNumError"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label><br>
+                        <select name="city" id="city" onchange="validateCity()">
+                            <option value="" selected>Choose city name</option>
+                            <option value="trivandrum">Trivandrum</option>
+                            <option value="kochi">Kochi</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                        <p id="cityError"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Gender</p>
+                        <input type="radio" name="gender" value="male" id="male" onchange="validateGender()">
+                        <label for="gender">Male</label>
+                        <input type="radio" name="gender" value="female" id="female" onchange="validateGender()">
+                        <label for="gender">Female</label>
+                        <p id="genderError"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="language">Languages (optional)</label><br>
+                        <input type="checkbox" name="language1" id="language1" value="kannada">
+                        <label for="language1">Kannada</label>
+                        <input type="checkbox" name="language2" id="language2" value="english">
+                        <label for="language2">English</label>
+                        <input type="checkbox" name="language3" id="language3" value="hindi">
+                        <label for="language3">Hindi</label>
+                        <input type="checkbox" name="language4" id="language4" value="tamil">
+                        <label for="language4">Tamil</label><br>
+                        <input type="checkbox" name="language5" id="language5" value="telugu">
+                        <label for="language5">Telugu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="sub-btn" type="submit" onclick="submitFrom(event)">Submit</button>
+                        <button id="res-btn" type="reset">Reset</button>
+                        <p id="submitError"></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section><br>
+    
+    <table class="pc_view" class="table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email Id</th>
+                <th>Mobile Number</th>
+                <th>City</th>
+                <th>Gender</th>
+                <th>Languages</th>
+            </tr>
+        </thead>
+        <tbody id="user_data_pc">
+            
+        </tbody>
+    </table>
+    <script>
+
+
+function form_handler(e) {
+    e.preventDefault();
+
+
+    let fullName_flag = false;
+    let emailId_flag = false;
+    let mobNum_flag = false;
+    let city_flag = false;
+    let gender_flag = false;
+
+    let fullName;
+    let emailId;
+    let mobNum;
+    let city;
+    let male;
+    let female;
+    let languages = []
+
+
+    /* Get All the input values */
+    fullName = document.getElementById("fullName").value;
+
+    emailId = document.getElementById("emailId").value;
+    mobNum = document.getElementById("mobNum").value;
+    city = document.getElementById("city").value;
+    male = document.getElementById("male").checked ? document.getElementById("male").value : ""
+    female = document.getElementById("female").checked ? document.getElementById("female").value : ""
+
+
+    document.getElementById('language1').checked ? languages.push(document.getElementById('language1').value) : ""
+    document.getElementById('language2').checked ? languages.push(document.getElementById('language2').value) : ""
+    document.getElementById('language3').checked ? languages.push(document.getElementById('language3').value) : ""
+    document.getElementById('language4').checked ? languages.push(document.getElementById('language4').value) : ""
+    document.getElementById('language5').checked ? languages.push(document.getElementById('language5').value) : ""
+
+
+
+
+    /* FullName Validation */
+    let fullName_regex = /^[A-Za-z]+(\s[A-Za-z]+)*$/
+
+    if (fullName.length === 0) {
+        document.getElementById("fullNameError").innerText = "Name field cannot be empty"
+        document.getElementById("fullNameError").style.color = "red"
+    } else {
+        if (fullName.length > 15) {
+            document.getElementById("fullNameError").innerText = "Exceed the limit"
+            document.getElementById("fullNameError").style.color = "orangered"
+
+        } else if (fullName_regex.test(fullName) === false) {
+            document.getElementById("fullNameError").innerText = "Invalid Full Name"
+            document.getElementById("fullNameError").style.color = "orangered"
+        } else {
+            document.getElementById("fullNameError").innerText = "Valid"
+            document.getElementById("fullNameError").style.color = "green"
+
+            fullName_flag = true
+
+        }
+    }
+
+
+
+
+
+
+
+
+    /* Email Validation */
+    let email_regex = /^\S+@\S+\.\S+$/; //Example: admin@gmail.com
+    if (emailId.length === 0) {
+        document.getElementById("emailIdError").innerText = "Email field cannot be empty"
+        document.getElementById("emailIdError").style.color = "red"
+    } else {
+        if (email_regex.test(emailId) === false) {
+            document.getElementById("emailIdError").innerText = "Invalid email"
+            document.getElementById("emailIdError").style.color = "orangered"
+        } else {
+            document.getElementById("emailIdError").innerText = "Valid"
+            document.getElementById("emailIdError").style.color = "green"
+
+            emailId_flag = true
+        }
+    }
+
+
+
+
+
+    /* Mobile Number Validation */
+    let mobNum_regex = /^[6-9]\d{9}$/; //ex
+    if (mobNum.length === 0) {
+        document.getElementById("mobNumError").innerText = "Number field cannot be empty"
+        document.getElementById("mobNumError").style.color = "red"
+    } else {
+        if (mobNum_regex.test(mobNum) === false) {
+            document.getElementById("mobNumError").innerText = "Invalid Mobile Number"
+            document.getElementById("mobNumError").style.color = "orangered"
+        } else {
+            document.getElementById("mobNumError").innerText = "Valid"
+            document.getElementById("mobNumError").style.color = "green"
+            mobNum_flag = true;
+        }
+    }
+
+
+
+
+    /* City Validation */
+    if (city == "") {
+        document.getElementById("cityError").innerHTML = "Please select the city name"
+        document.getElementById("cityError").style.color = "red"
+
+    } else {
+        document.getElementById("cityError").innerText = "Selected"
+        document.getElementById("cityError").style.color = "green"
+        city_flag = true
+    }
+
+
+
+    /* Gender Validation */
+
+
+    if (male == "male" || female == "female") {
+        document.getElementById("genderError").innerHTML = "selected"
+        document.getElementById("genderError").style.color = "green"
+        gender_flag = true
+
+    } else {
+        document.getElementById("genderError").innerHTML = "Please select the Gender"
+        document.getElementById("genderError").style.color = "red"
+    }
+
+
+
+
+    /* if all value have true then form will submit */
+    if (!fullName_flag || !emailId_flag || !mobNum_flag || !city_flag || !gender_flag) {
+        console.log(fullName_flag, emailId_flag, mobNum_flag, city_flag, gender_flag)
+        document.getElementById("submitError").innerHTML = "please enter all the required information";
+        document.getElementById("submitError").style.color = "red"
+    } else {
+
+        console.log("submited")
+        alert("Submitted Sucessfully")
+
+        /* Intert data to pc_view_table */
+        document.getElementById("user_data_pc").innerHTML += 
+        `<tr><td>${fullName}</td>
+        <td>${emailId}</td>
+        <td>${mobNum}</td>
+        <td>${city}</td>
+        <td>${male || female}</td>
+        <td>${languages}</td></tr>`
+
+
+        /* insert data to tab_mobile_view table */
+        document.getElementById("tab_and_mob_view").innerHTML +=
+    `<tr>
+        <td>Full Name</td>
+        <td>${fullName}</td>
+    </tr>
+    <tr>
+        <td>Email Id</td>
+        <td>${emailId}</td>
+    </tr>
+    <tr>
+        <td>Mobile Number</td>
+        <td>${mobNum}</td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>${city}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>${male}</td>
+    </tr>
+    <tr>
+        <td>Languages</td>
+        <td>${languages}</td>
+    </tr>`
+
+
+
+        alert("ok")
+        document.getElementById("contact-formm")/* .submit() */;
+
+        document.getElementById("contact-formm").reset();
+        document.getElementById("fullNameError").innerText = ""
+        document.getElementById("emailIdError").innerText = ""
+        document.getElementById("mobNumError").innerText = ""
+        document.getElementById("cityError").innerText = ""
+        document.getElementById("genderError").innerText = ""
+        document.getElementById("submitError").innerText = ""
+
+    }
+
+
+}
+
+document.getElementById("sub-btn").addEventListener("click", form_handler)
+
+    </script>
+
+</body>
+
+</html>

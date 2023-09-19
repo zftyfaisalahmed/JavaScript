@@ -1,0 +1,48 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.contact-form{
+    width: fit-content;
+    height: 100%;
+    padding: 30px;
+    margin: auto;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+.contact-form table td{
+    padding: 14px;
+    text-align: center;
+}
+.contact-form  #fullName, #emailId, #mobNum, #city{
+    height: 30px;
+    width: 250px;
+}
+
+#sub-btn, #res-btn {
+    padding: 10px;
+    border: 1px solid black;
+    color: white;
+}
+
+#sub-btn{
+    background-color: rgb(0, 140, 255);
+}
+
+#res-btn{
+    background-color: rgb(0, 140, 255);
+}
+        
+.table{
+    
+    border: 2px solid black;
+    padding: 20px;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+

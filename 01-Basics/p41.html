@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <center>
+        <h1>Arrays</h1>
+    </center>
+    <hr>
+
+    <!-- Array -> is a group if values of similar type 
+    types -
+    1. Literal type (single)
+        a. array literal
+        b. array using constructor
+        c. array as constructor parameter
+    2. Object Array
+    3. JSON (JavaSript Object Notation)     -->
+    <script>
+        var num = [1,2,3,4,5,3,7,5,4];
+        document.write(`<h3>${num}</h3>`)
+        document.write(`<h3>${num[5]}</h3>`)
+        document.write(`<h3>${num[9]}</h3>`)
+
+        var user = ['gho','lav','niki','me','teju','prajju','celin'];
+        document.write(`<h3>${user}</h3>`)
+        document.write(`<h3>${user[5]}</h3>`)
+
+        for (i=0; i< num.lenght; i++)
+        {
+            document.write(`<h3 style= "color: orange;"> ${num[i]} </h3>`);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <center>
+        <h1>Use switch key = add, sub, mul, div, rem a and b</h1>
+    </center>
+    <hr>
+
+        <script>
+            function Calc(){
+                var val1 = document.getElementById("val1").value;
+                var val2 = document.getElementById("val2").value;
+                var opt = document.getElementById("opt").value;
+                
+                var ans = eval(val1 + opt + val2);
+                document.getElementById("ans").value = ans;
+            }
+        </script>
+
+   
+    
+        <div>
+            <div>
+                
+                <div>
+                    <label for="desc">Enter input a :</label> 
+                
+                    <input type="number" class="form-control" id="val1" value="" required>
+                </div>
+            </div>
+            <br />
+            <div>
+                <div>
+                    <label for="desc">Enter input b :</label> 
+                
+                    <input type="number" class="form-control" id="val2" value="" required>
+                </div>
+                <br>
+                
+                <div>
+                    <select id="opt">
+                        <option value="+">Addition</option>
+                        <option value="-">Subtraction</option>
+                        <option value="*">Multiplication</option>
+                        <option value="/">Division</option>
+                        <option value="%">Modulus</option>
+                    </select>
+                </div>
+    
+            </div>
+            <br />
+            <div>
+                <div>
+                    <label for="desc">Answer:</label> 
+               
+                    <input type="text" class="form-control" id="ans" readonly>
+                </div><br>
+                <div>
+                    <button type="submit" name="submit" onClick="Calc()">Submit</button>
+                </div>
+            </div>
+        </div>
+    
+   
+    </body>
+</html>

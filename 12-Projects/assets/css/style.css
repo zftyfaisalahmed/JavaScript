@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(../images/img1.jpg) no-repeat center;
+    background-size: cover;
+} 
+section{
+    text-align: center;
+    margin: 10px auto;
+    width: 470px;
+    padding: 30px;
+    border: 2px solid white;
+    background-color: rgba(64, 68, 70, 0.5);
+    border-radius: 20px;
+}
+section>h1{
+    font-size: 50px;
+    margin: auto;
+}
+
+section>input{
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    /* color: white; */
+    font-size: 20px;
+    padding: 10px;
+    width: 90%;
+    background-color: rgba(64, 68, 70, 0.5);
+}
+
+button{
+    font-size: 35px;
+    padding: 15px  45px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: rgba(64, 68, 70, 0.5);
+    transition: 1s;
+}
+section>h1{
+    color: white;
+}
+button:hover{
+    background-color: #f7eded;
+    color: black;
+}
+section>input::placeholder{
+    color: white;
+}

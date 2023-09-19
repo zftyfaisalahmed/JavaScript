@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <center>
+        <h1>Call Back Function...!</h1>
+    </center>
+    <hr>
+
+    <script>
+
+        function howAre(question, yes, no){
+            if(confirm(question)){
+                yes();
+            } else {
+                no();
+            }
+        }
+        howAre(
+            "How are you?",
+            function(){document.write(`this is second parameters vale, Good`);},
+            function(){document.write(`this is third parameters vale, bad`);}
+        )
+    </script>
+</body>
+</html>

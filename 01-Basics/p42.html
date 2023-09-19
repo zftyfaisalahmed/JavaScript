@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <center>
+        <h1>Array using Constructor</h1>
+    </center>
+    <hr>
+    
+    <script>
+        // ref / instance => x
+        var x = new Array();
+        
+        document.write(`<p>X is : ${typeof(x)}</p>`)
+
+        //assign the value
+        x[0] = "blue";
+        x[1] = "green";
+        x[2] = "red";
+        x[3] = "black";
+
+        document.write(`<h3>${x}</h3>`);
+        document.write(`<h3>${x[3]}</h3>`);
+        
+        for(i=0; i< x.lenght; i++)
+        {
+            document.write(`<h3> ${x[i]} </h3>`);
+        }
+
+        // array.forEach(function(param){
+        //     param => index
+        // })
+
+        x.forEach(function(item){
+            document.write(`<h2 style= "color: green;">${item}</h2>`)
+        })
+    </script>
+</body>
+</html>

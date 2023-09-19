@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS(3-Number)</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Enter the A value?");
+           document.write(`<h3>typeof Method ${typeof(x)}</h3>`);
+           
+           let y = prompt("Enter the B Value");
+           document.write(`<h3>Typeof Method ${typeof(y)}</h3>`);
+
+           let z = prompt("Enter the C Value");
+           document.write(`<h3>Typeof Method ${typeof(z)}</h3>`);
+   
+           var a = Number(x);
+           var b = Number(y);
+           var c = Number(z);
+   
+           if(a>b && a>c){
+               document.write(`<h3>A is Greater than B & C</h3>`)
+           }else if(b>c && b>a){
+               document.write(`<h3>B is Greater than A & C</h3>`)
+           }else{
+               document.write(`<h3>C is  Greater than A & B</h3>`)
+           }
+       </script>
+</body>  
+</html>

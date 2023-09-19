@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Event</title>
+    <style>
+        #txt{
+            background-color: teal;
+            color: white;
+            padding: 12px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+        }
+        h4{
+            padding: 10px;
+            background-color: crimson;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onmousewheel() and onscroll()</h1>
+    </center>
+
+    <h4 id="output"></h4>
+
+    <div id="txt" onmousewheel= "wheelHandler()" onscroll="wheelHandler()">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p> <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aut dolor autem laudantium ut earum, praesentium vitae blanditiis nisi at quibusdam ea obcaecati, sed voluptatem est atque sunt? Quos, numquam?z
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem tenetur dolorem aliquam fugiat. Quibusdam ullam vel nisi nam, explicabo accusantium enim dicta eligendi. Minus enim cumque iste repellat recusandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nihil voluptas repellat. Iste, tenetur. Reprehenderit hic nam nihil nesciunt, neque accusamus porro dolor veritatis est recusandae vel dolorem officia!
+        </p>
+    </div>
+
+    <script>
+        function wheelHandler(){
+            let element = document.getElementById("txt");
+
+            document.getElementById("output").innerHTML = element.scrollTop + "px"
+        }
+    </script>
+</body>
+</html>

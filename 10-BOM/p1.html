@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        function getResolution(){
+            alert("Total screen Width is: "+ screen.width);
+            alert("Total screen Height is: "+ screen.height);
+            alert("Total screen Avail Width is: "+ screen.availWidth);
+            alert("Total screen Avail Height is: "+ screen.availHeight);
+        }
+    </script>
+    <button type="button" onclick="getResolution()">Get Resolution</button>
+
+    <script>
+        function getColorDepth(){
+            alert("Your Screen color Depth is: " + screen.colorDepth);
+        }
+    </script>
+    <button type="button" onclick="getColorDepth()">Get Color Depth</button>
+    <script>
+        function getPixelDepth(){
+            alert("Your Screen color Depth is: " + screen.pixelDepth);
+        }
+    </script>
+    <button type="button" onclick="getPixelDepth()">Get Pixel Depth</button>
+</body>
+</html>

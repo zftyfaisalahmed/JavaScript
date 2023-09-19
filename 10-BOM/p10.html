@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <p>The current time on your computer is: <span id="clock"></span></p>
+    <p>The current date on your computer is: <span id="date"></span></p>
+    <p>The current status on your computer is: <span id="place"></span></p>
+    <script>
+        function showTime(){
+            let time = new Date();
+            document.getElementById("clock").innerHTML = time.toLocaleTimeString();
+            document.getElementById("date").innerHTML = time.toLocaleDateString();
+            document.getElementById("place").innerHTML = time.toLocaleString();
+
+        }
+        setInterval(showTime,1000)
+    </script>
+
+    <script>
+        var timeOut;
+
+        function showAlert(){
+            alert('This is JavaScript alert box..1');
+        }
+
+        function delayedAlert(){
+            timeOut = setTimeout(showAlert,2000);
+        }
+
+        function clearAlert(){
+            clearTimeout(timeOut);
+        }
+    </script>
+
+    <button onclick="delayedAlert()">delayedAlert</button>
+    <button onclick="clearAlert()">clearAlert</button>
+</body>
+</html>

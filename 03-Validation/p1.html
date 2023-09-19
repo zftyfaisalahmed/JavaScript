@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <center>
+        <h1>User Name Validation</h1>
+    </center>
+    <hr>
+
+    <form autocomplete="off">
+        <label for="user">Username</label>
+        <input type="text" name="user" id="user" onkeyup="valiDate()">
+        <strong id="status"></strong>
+        <br><br>
+        <input type="submit" name="" id="" value="Submit">
+    </form>
+
+    <script>
+        function valiDate(){
+            let user = document.getElementById('user').value;
+            let status = document.getElementById('status');
+
+            console.log('user =', user)
+
+            if(user.lenght == 0){
+                    status.innerText = "Enter User Name";
+                    status.style.color = "green";
+                } else if(user.lenght <= 5){ 
+                    status.innerHTML = `User input lenght must be 5 char`;
+                    status.style.color = `orange`;
+                } else if(user.lenght > 5){
+                    status.innerHTML =  `Valid Username`;
+                    status.style.color = `orange`;
+                }
+            }
+    </script>
+</body>
+</html>

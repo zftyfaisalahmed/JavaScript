@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JavaScript Object</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>
+            Literal type(Single)
+            <ul>
+                <li>Object Literal</li>
+                <li>Creating of object directly (using constructor method)</li>
+                <li>Using an object constructor (using constructor parameter)</li>
+            </ul>
+        </li>
+        <li>Object Array</li>
+        <li>JSON (JavaScript object Notation) Array (Response of REST [Representional state transfer]) API</li>
+    </ol>
+
+    <center>
+        <h1>Literal Object</h1>
+        <p>Key: Value => Property of an object</p>
+    </center>
+    <p><strong>SYNTAX :</strong></p>
+    <pre>
+        let literalObjectName ={
+            "key1": "value1",
+            "key2": "value2",
+            "key3": "value3",
+            "key4": "valueN",
+        };
+
+            console.log(literalObjectName);
+            console.log(typeof(literalObjectName));
+            console.log(literalObjectName.key1)        
+    </pre>
+    <hr>
+
+    <script>
+       let test = "hello" 
+       document.write(`<h3>typeof test : ${typeof test}</h3>`);
+       document.write(`<h3>test = ${test}</h3>`)
+
+       let car ={
+        "key1" : 2023,
+        "color" : "red",
+        "brand" : "CLA 200 d",
+        "Company" : "Mercedes",
+        "isRunnable" : true  
+       };
+       document.write(`<h3>CAR = ${car}</h3>`)
+       document.write(`<h3>CAR Typeof= ${typeof car}</h3>`)
+       document.write(`<h3>CAR Model= ${car.key1}</h3>`)
+       document.write(`<h3>CAR Colour= ${car.color}</h3>`)
+       document.write(`<h3>CAR Brand= ${car.brand}</h3>`)
+       document.write(`<h3>CAR Company= ${car.Company}</h3>`)
+       document.write(`<h3>CAR is Runnable= ${car.isRunnable}</h3>`)
+    </script>
+</body>
+</html>

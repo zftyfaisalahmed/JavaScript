@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Function, array and object as properties</h1>
+    </center>
+
+    <hr>
+
+    <script>
+        let user = {
+            "name" : "Faisal",
+            "email" : "Faizii@gmail.com",
+            "hobbies" : ["cycling","riding","driving"],
+            "getName" : function (){
+                return this.name
+            },
+            "address" : {
+                "city" : "bengaluru",
+                "pincode" : 560051
+            },
+            getAddress: function(){
+                return this.address.city + `, pin =` + this.address.pincode
+            }
+        };
+
+
+        document.write(`<h3> Object = ${user.name}</h3>`);
+        document.write(`<h3> Hobbies = ${user.hobbies}</h3>`);
+
+        user.getName();
+        user.getAddress();
+
+        document.write(`<h3>Address city = ${user.address.city}</h3>`)
+        document.write(`<h3>Address zip = ${user.address.pincode}</h3>`)
+        // document.write(`<h3>Address city = ${user.address.city}</h3>`)
+        document.write(`<h3>Name = ${user.name}</h3>`)
+    </script>
+</body>
+</html>

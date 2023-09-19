@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        h1{
+            text-align: center;
+            margin: 20px;
+        }
+        hr{
+            margin: 10px 0px;
+        }
+        body{
+            background: url(assets/images/image3.jpeg) no-repeat center;
+            background-size: cover;
+            /* color: white; */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Temperature Converter</h1>
+    </center>
+    <!-- <h1>Temperature Converter</h1> -->
+    <hr>
+    <div class="converter">
+        <label for="Celsius">Celsius:</label>
+        <input type="text" id="fahrenheit" placeholder="Enter Celsius temperature">
+        <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <br><br>
+        <label for="Fahrenheit">Fahrenheit:</label>
+        <input type="text" id="celsius" placeholder="Enter Fahrenheit temperature">
+        <button onclick="convertToCelsius()">Convert to Celsius   </button>
+        <input type="text" id="result">
+    </div>
+    
+    <script>
+        function convertToFahrenheit() {
+            const celsiusInput = document.getElementById("fahrenheit").value;
+            const celsius = parseFloat(celsiusInput);
+        
+            if (celsius) {
+                const fahrenheit = (celsius * 9/5) + 32;
+                document.getElementById("result").value = `${celsius} Celsius is ${fahrenheit.toFixed(2)} Fahrenheit.`;
+            } else {
+                document.getElementById("result").value = "Please enter a valid temperature in Celsius.";
+            }
+        }
+        
+        function convertToCelsius() {
+            const fahrenheitInput = document.getElementById("celsius").value;
+            const fahrenheit = parseFloat(fahrenheitInput);
+        
+            if (!isNaN(fahrenheit)) {
+                const celsius = (fahrenheit - 32) * 5/9;
+                document.getElementById("result").value = `${fahrenheit} Fahrenheit is ${celsius.toFixed(2)} Celsius.`;
+            } else {
+                document.getElementById("result").value = "Please enter a valid temperature in Fahrenheit.";
+            }
+        }
+        
+    </script>
+</body>
+</html>
