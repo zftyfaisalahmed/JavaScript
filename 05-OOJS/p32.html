@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Class ES-6</h1>
+        <p>Finding Even or Odd using Class</p>
+    </center>
+    <hr>
+
+    <label for="OddEven">Enter Number</label>
+    <input type="text" name="Number" id="Number">
+    <button type="button" id="button">Submit</button>
+    <hr>
+    <h1 id="output"></h1>
+
+    <script>
+        var button = document.getElementById("button")
+
+        button,addEventListener('click',function()
+        {
+            class oddEven{
+                constructor(){
+                    let number = Number(document.getElementById("Number").value)
+                    let res = document.getElementById("output")
+                    if(number > 0){
+                        if(number % 2 ==0){
+                           res.innerHTML = number + "It is an Even";
+                        }
+                        else {
+                            res.innerHTML = number + "It is an Odd"
+                        }
+                    }
+                    else{
+                        res.innerHTML = "Zero"
+                    }
+                }
+            }
+            var calc = new oddEven()
+        })
+    </script>
+</body>
+</html>

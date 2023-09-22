@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOJS</title>
+    </head>
+    <body>
+       <center>
+            <h1>Class ES-6</h1>
+            <p>Parameterised Class</p>
+       </center> 
+       <hr>
+
+       <script>
+            class Sum{
+                constructor (x,y){
+                    this.a = x;
+                    this.b = y;
+                }
+                calculateAdd(){
+                    return this.a + this.b;
+                }
+                calculateMul(){
+                    return this.a * this.b;
+                }
+            }
+
+            let s = new Sum(12,44)
+            let s1 = new Sum(22,43)
+
+            console.log(`s =`, s)
+            console.log(`s1 =`, s1)
+
+            document.write(`<h1> Sum = ${s.calculateAdd()}</h1>`)
+            document.write(`<h1> Sum1 = ${s1.calculateAdd()}</h1>`)
+
+            document.write(`<h1> Sum = ${s.calculateMul()}</h1>`)
+            document.write(`<h1> Sum = ${s1.calculateMul()}</h1>`)
+
+       </script>
+    </body>
+</html>

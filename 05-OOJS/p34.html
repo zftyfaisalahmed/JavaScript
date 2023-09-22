@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <script>
+        class Demo3 {
+            static Display(){
+                return "This is class Demo3 static method example..!";
+            }
+            constructor(){
+                document.write(Demo3.Display());
+            }
+        }
+        var demo3 = new Demo3();
+    </script>
+
+    <h3>Static Method Example 5..!</h3>
+    <script>
+        class Demo4{
+            constructor() {
+            }
+            static Display(){
+                return "This is Class Demo4 static method example..!";
+            }
+            getresult(){
+                document.write(Demo4.Display());
+            }
+            static test(){
+                getresult()
+            }
+        }
+        let demo4 = new Demo4();
+        demo4.getresult()
+        Demo4.test();
+    </script>
+
+    <h3>Satic Method example 6...!</h3>
+    <script>
+        class StaicMethodCall{
+            static staticMethod(){
+                return "Static Method has been called ";
+            }
+            static anotherStatic(){
+                return this.staticMethod() + ' From Another static method';
+            }
+        }
+
+        document.write(StaicMethodCall.staticMethod());
+
+        document.write(StaicMethodCall.anotherStatic());
+    </script>
+</body>
+</html>
