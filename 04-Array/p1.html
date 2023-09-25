@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <center>
+        <h1>Array</h1>
+        <p>Collection of data.</p>
+    </center>
+    <hr>
+
+    <h2>By array literal</h2>
+    <hr>
+
+    <script>
+        let fruits = ["Apple", 'Mango', "banana", "orange", 1000]
+
+        document.write(typeof(fruits)+ "<br>")
+        document.write(fruits + "<br>")
+        
+        document.write("<hr>")
+        document.write("Fruits lenght = ", fruits.length + "<br>")
+        document.write("Frist Index Value = ", fruits[0] + "<br>")
+        document.write("Second Index Value = ", fruits[1] + "<br>")
+        document.write("<hr>")
+
+        for (let index = 0; index < fruits.length; index++){
+            document.write(fruits[index] + "<br>")
+        }
+    </script>
+
+    <hr>
+    <center>
+        <h1>By creating instance of Array Object or Constructor directly (Using new keyword)</h1>
+    </center>
+    <hr>
+
+    <script>
+        let empName = new Array();
+
+        document.write("EmpName = " , typeof(empName))
+
+document.write("<br>")
+
+        empName[0] = "Faizii0"
+        empName[1] = "Faizii1"
+        empName[2] = "Faizii2"
+        empName[3] = "Faizii3"
+        empName[4] = "Faizii4"
+        empName[5] = "Faizii5"
+        empName[6] = "Faizii6"
+        empName[7] = "Faizii7"
+
+        for(let index = 0; index < empName.length; index++){
+            document.write(empName[index] + "<br>")
+        }
+    </script>
+
+    <hr>
+    <center>
+        <h1>By using an Array Object or Constructor Parameter (Using new keyword)</h1>
+    </center>
+    <hr>
+
+    <script>
+        let studentInfo = new Array("AK", "pk", "oiug", "iuy");
+
+        for(let index = 0; index < studentInfo.length; index++){
+            document.write(studentInfo[index] + "<br>")
+        }
+    </script>
+</body>
+</html>

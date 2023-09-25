@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array</title>
 </head>
 <body>
+    <center>
+        <h1>Array Methods</h1>
+    </center>
+    <hr>
+
+    <h2>splice(Start,deleteCount, data)</h2>
     <script>
-        
+        let AlphaBet = ["G","Y","O","F","D","A"];
+        document.write(`<h3> ${AlphaBet}</h3>`);
+
+        AlphaBet.splice(2,0, "A","E");
+        document.write(`<h3>${AlphaBet}</h3>`)
+
+        AlphaBet.splice(3,0, "Z","L");
+        document.write(`<h3>${AlphaBet}</h3>`)
+
+        AlphaBet.splice(2,3)
+        document.write(`<h3>${AlphaBet}</h3>`)
     </script>
 </body>
 </html>

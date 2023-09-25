@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.card{
+    background: #e2e0e0;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+.card>img{
+    height: 230px;
+    width: 400px;
+}
+.space{
+    word-spacing: 4cm;
+}
+.space1{
+    word-spacing: 4.65cm;
+}
+.fa-solid{
+    background: blue;
+    height: auto;
+    padding: 20px;
+    width: auto;
+}
