@@ -1,26 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-    <link rel="stylesheet" href="assets/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <section class="card">
-        <img src="/05-OOJS/assets/images/pic1.jpg" alt="">
-        <center><br>
-            <div>CHANDINI</div>
-            <table class="plate">
-                <div class="space">Email sunil@gmail.com</div>
-                <div class="space1">Mobile 0987654321</div>
-            </table><br>
-            <details class="left"><summary>Address</summary>0987 Lorem ipsum dolor sit amet consectetur</details>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="assets/fontawesome-free-6.4.2-web/css/all.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media.css">
+    </head>
+    <body>
+        <br><hr>
+        <center>
+            <p>Employee Details</p>
         </center>
-        <i class="fa-solid fa-pen"></i>
-        <i class="fa-solid fa-trash"></i>
-    </section>
-    <script src="assets/fontawesome-free-6.4.2-web/js/all.js"></script>
-</body>
+        <br><hr>
+        <section class="container">
+            <section class="employee">
+                <div class="employee1">
+                    <div><img src="assets/images/pic1.jpg" width="350px"></div>
+                    <center id="demo1"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email1" name="email" value="celin@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321" ><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic2.jpg" width="350px"></div>
+                    <center id="demo2"></center>
+                    <div class="employee2">
+                        <div class="employee3"> 
+                            <label for="">Email :</label>
+                            <input type="text" id="email2" name="email" value="teju@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic3.jpg" width="350px"></div>
+                    <center id="demo3"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email3" name="email" value="ksr@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+        </section>
+
+        <section class="container">
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic4.jpg" width="350px"></div>
+                    <center id="demo4"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email4" name="email" value="lakshmi@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic5.jpg" width="350px"></div>
+                    <center id="demo5"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email5" name="email" value="nisha@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1">
+                    <div><img src="assets/images/pic6.jpg" width="350px"></div>
+                    <center id="demo6"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email6" name="email" value="lavanya@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="place"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+        </section>
+
+        <section class="container">
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic7.jpg" width="350px"></div>
+                    <center id="demo7"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email7" name="email" value="hasi@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="demo"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic8.jpg" width="350px"></div>
+                    <center id="demo8"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email8" name="email" value="prajwal@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>
+                            <details id="demo"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+            <section class="employee">
+                <div class="employee1 ">
+                    <div><img src="assets/images/pic9.jpg" width="350px"></div>
+                    <center id="demo9"></center>
+                    <div class="employee2">
+                        <div class="employee3">
+                            <label for="">Email :</label>
+                            <input type="text" id="email9" name="email" value="roshan@gmail.com"><hr>
+                            <label for="">Mobile :</label>
+                            <input type="text" id="mobile" value="0987654321"><hr>                  
+                            <details id="demo"><summary>Address</summary>0987 iuytdcvjky</details>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employee4">
+                    <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                    <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </section>
+        </section>
+
+        <section class="employee">
+            <div class="employee1 ">
+                <div><img src="assets/images/pic10.jpg" width="350px"></div>
+                <center id="demo10"></center>
+                <div class="employee2">
+                    <div class="employee3">
+                        <label for="">Email :</label>
+                        <input type="text" id="email10" name="email" value="prashub@gmail.com"><hr>
+                        <label for="">Mobile :</label>
+                        <input type="text" id="mobile" value="0987654321"><hr>
+                        <details><summary>Address</summary>0987 iuytdcvjky</details>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="employee4">
+                <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+                <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+        </section>
+
+        <script src="assets/js/script.js"></script>
+        <script src="assets/fontawesome-free-6.4.2-web/js/all.js"></script>
+    </body>
 </html>
