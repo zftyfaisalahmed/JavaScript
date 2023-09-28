@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOJS</title>
+    </head>
+    <body>
+        <center>
+            <h1>JavaScript Encapsulation</h1>
+            <p>It is process of building the data with the function acting on that data. It allow us to control the data and validate</p>
+        </center>
+        <hr>
+
+        <details>
+            <summary><b>Point to Remember</b></summary>
+            <ul>
+                <li>Use var keyword to make data member private</li>
+                <li>Use setter method to set the data and getter method to get that data.</li>
+            </ul>
+        </details>
+        <p><b>Encapsulation allow us to handle an object using the following properties.</b></p>
+        <p><b>Read/write -</b>Here, we use setter methods to write the data and getter methods read that data.</p>
+        <p><b>Read only -</b>In this case, we use getter method only</p>
+        <p><b>Write only -</b>In this case, we use setter method only</p>
+        <hr>
+
+        <script>
+            class Student{
+                constructor(name) {
+                    let firstName;
+                    let lastName;
+                    let marks;
+                    let mobile;
+                }
+                getfirstName(){
+                    return this.firstName;
+                }
+                setfirstName(firstName1){
+                    this.firstName = firstName1;
+                }
+                getLastName(){
+                    return this.lastName;
+                }
+                setLastName(lastName1){
+                    this.lastName = lastName1;
+                }
+
+                getFullName(){
+                    return this.firstName + " " + this.lastName;
+                }
+
+                getMarks(){
+                    return this.marks
+                }
+                setMarks(marks1){
+                    if (marks1 < 0 || marks1 > 100){
+                        alert("Invalid")
+                    } else{
+                        this.marks = marks1
+                    }
+                }
+                getMobile(){
+                    return this.mobile
+                }
+                setMobile(mobile1){
+                    if (mobile1 < 0 || mobile1 >= 10){
+                        alert("Invalid")
+                    } else{
+                        this.mobile = mobile1
+                    }
+                }
+            }
+
+            let student = new Student();
+
+            student.setfirstName("Be-practical") 
+            document.write(`<p>${student.getfirstName()}</p>`)
+
+            student.setLastName("Be-practical") 
+            document.write(`<p>${student.getLastName()}</p>`)
+
+            document.write(`<p>${student.getFullName()}</p>`)
+
+            student.setMarks(40) 
+            document.write(`<p>${student.getMarks()}</p>`)
+
+            student.setMarks(9108968419) 
+            document.write(`<p>${student.getMobile()}</p>`)
+        </script>
+    </body>
+</html> 

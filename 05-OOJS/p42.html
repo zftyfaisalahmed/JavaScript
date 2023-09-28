@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Alias Property</h1>
+    </center>
+    <hr>
+
+    <script>
+        class Person{
+            constructor() {
+                let email;
+            }
+
+            get email(){
+                return `My email is = ${this._email1}`
+            }
+            set email(em){
+                this._email1 = em
+            }
+        }
+
+        let per = new Person()
+
+        per.email = "Faizii@gmail.com"
+        document.write(`<h1>${per.email}</h1>`)
+    </script>
+</body>
+</html>
