@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Private member inside the class</h1>
+    </center>
+    <hr>
+
+    <script>
+        class Company{
+            constructor(){
+                const emp = []; //private member 
+
+                // setter method
+                this.setEmp = function(val){
+                    emp.push(val)
+                    return emp
+                }
+
+                // getter method
+                this.getEmp = function( ){
+                    return emp.shift()
+                }
+            }
+        }
+
+        let x = new Company();
+
+        console.log("instance x = ", x)
+
+
+        x.setEmp("Jonny")
+        x.setEmp("Jonn")
+        x.setEmp("Jon")
+
+        console.log("emp = ", x.setEmp())
+
+        console.log("first = ", x.getEmp())
+        console.log("second = ", x.getEmp())
+        console.log("Third = ", x.getEmp())
+    </script>
+</body>
+</html>

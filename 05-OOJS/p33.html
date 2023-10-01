@@ -6,7 +6,64 @@
     <title>OOJS</title>
 </head>
 <body>
-    <script>
+    <center>
+        <h1>Static Method...!</h1>
+        <p>JS provides static method that belong to the class instead of an instance of an that class. these method are called directly on the class itself.</p>
+    </center>
+    <hr>
+
+    <h3>Points to remember..!</h3>
+    <ul>
+        <li>The static keyword is used to declare a static methods,</li>
+        <li>The static method can be any name</li>
+        <li>A class can contain more than one static method.</li>
+        <li>if we declare more than one static method with a similar name,the js always invokes the last one.</li>
+        <li>we can use this keyword to call a static method within the non-static methods.</li>
+        <li>In such case, we can call the static method either using the class name or as the property of the constructor.</li>
+    </ul>
+    <hr>
+
+        <h3>Static methods Example-1..!</h3>
+        <script>
+            class   demo{
+                static Display() {
+                    document.write("<p>This is Demo Static method...!</p>")
+                }
+            }
+            demo.Display();
+        </script>
+
+        <h3>Static methods Example-2...!</h3>
+        <script>
+            class Demo1{
+                static Display1(){
+                    return "This is Display1 static method...!"
+                }
+                static Display2(){
+                    return "This is Display2 static method...!"
+                }
+            }
+            document.write(Demo1.Display1(),`<br>`)
+            document.write(Demo1.Display2())
+        </script>
+
+        <h3>Static methods Example-3...!</h3>
+
+        <script>
+            class Demo2 {
+                static Display1(){
+                    return "This is Display1 Static method..!"
+                }
+                static Display1(){
+                    return "This is Display1 <Static> method again..!"
+                }
+            }
+            document.write(Demo2.Display1())
+        </script>
+
+        <h3>Static methods Example-4...!</h3>
+
+        <script>
         class Demo3 {
             static Display(){
                 return "This is class Demo3 static method example..!";
@@ -16,31 +73,31 @@
             }
         }
         var demo3 = new Demo3();
-    </script>
+        </script>
 
-    <h3>Static Method Example 5..!</h3>
-    <script>
-        class Demo4{
-            constructor() {
+        <h3>Static Method Example-5..!</h3>
+        <script>
+            class Demo4{
+                constructor() {
+                }
+                static Display(){
+                    return "This is Class Demo4 static method example..!";
+                }
+                getresult(){
+                    document.write(Demo4.Display());
+                }
+                static test(){
+                    getresult()
+                }
             }
-            static Display(){
-                return "This is Class Demo4 static method example..!";
-            }
-            getresult(){
-                document.write(Demo4.Display());
-            }
-            static test(){
-                getresult()
-            }
-        }
-        let demo4 = new Demo4();
-        demo4.getresult()
-        Demo4.test();
-    </script>
+            let demo4 = new Demo4();
+            demo4.getresult()
+            Demo4.test();
+            </script>
 
-    <h3>Satic Method example 6...!</h3>
-    <script>
-        class StaicMethodCall{
+        <h3>Satic Method example 6...!</h3>
+        <script>
+            class StaicMethodCall{
             static staticMethod(){
                 return "Static Method has been called ";
             }
