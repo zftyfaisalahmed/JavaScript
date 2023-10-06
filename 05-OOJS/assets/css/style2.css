@@ -1,0 +1,177 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+.container{
+    display: center;
+
+}
+
+
+.form_and_table{
+    padding: 30px;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.contact-form{
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    background-color: gray;
+    border: 1.5px solid black;
+    
+}
+
+.contact-form table td{
+    padding: 8px;
+    text-align: center;
+}
+.contact-form  #fullName, #emailId, #mobNum, #city{
+    height: 30px;
+    width: 250px;
+}
+
+
+.my-tables .pc_view{
+    border-collapse: collapse;
+    background-color: gray;
+    width: max-content;
+}
+
+.my-tables .pc_view tr th, .my-tables .pc_view tr td{
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 130px;
+    max-width: 150px;
+}
+
+.my-tables .pc_view tr th{
+    background-color: white;
+    color: black;
+}
+
+.my-tables .pc_view tr:nth-child(even){
+    background-color: #efefef;
+}
+
+
+.my-tables .tab_and_mob_view{
+    display: none
+}
+
+.my-tables .tab_and_mob_view{
+    border-collapse: collapse;
+    background-color: #f4f4f4;
+    width: max-content;
+    margin: 10px;
+}
+
+
+
+
+.my-tables .tab_and_mob_view #user_data_tab_and_mob tr:nth-child(6n+1){
+    background-color: #f4f4f4;
+    color: white;
+    border-spacing:0 15px;
+    border-collapse:separate;
+}
+
+
+.my-tables .tab_and_mob_view tr td{
+    border: 1px solid black;
+    padding: 5px 20px;
+}
+
+
+.banner>center>form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+label {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+input{
+      width: 250px;
+      height: 20px;
+      background-color: transparent;
+      border: 1px solid black;
+}
+textarea{
+      background-color: transparent;
+      border: 1px solid black;
+}
+form>h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+form>button {
+    margin: 10px;
+}
+
+form>[type="submit"] {
+    background-color: rgb(26, 134, 84);
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 2.95px 2.95px 3.6px;
+    transition: 1s;
+}
+form>[type="submit"]:hover{
+      background-color: transparent;
+      border: 2px solid black;
+      color: black;
+}
+
+form>[type="reset"] {
+    background-color: rgb(34, 150, 150);
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 2.95px 2.95px 3.6px;
+    transition: 1s;
+}
+form>[type="reset"]:hover{
+      background-color: transparent;
+      border: 2px solid black;
+      color: black;
+}
+.nins{
+      border: none;
+}    
+.pc_view{
+      display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100vh;
+    height: fit-content;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid black;
+    /* word-spacing: 20px; */
+}
+
+#user_data_pc{
+      background-color: #f4f4f4;
+      color: black;
+}

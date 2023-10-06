@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED</title>
+</head>
+<body>
+    <center>
+        <h1>Generator function</h1>
+    </center>
+    <hr>
+
+    <h2>JavaScript Function</h2>
+    <p>1) Local function (function A (){})</p>
+    <p>2) Expression Function ( let A = function(){})</p>
+    <p>3) Arrow function ( let A () => {})</p>
+    <p>4) callBack Function ( forEach (function(item){});)</p>
+    <p>5) Closer Function (function A() { function B(){} B();})</p>
+    <p>6) Anonymous function (()();)</p>
+    <p>7) Lambda function (A = (X) => 100 + x)</p>
+    <p>8) Generator Function (function * A() { yeild "A"; yeild "B" })</p>
+
+    <script>
+        function A(){
+            let a=10, b= 20, sum;
+            sum = a + b
+            return sum
+            return a 
+            console.log(sum)
+        }
+        
+        document.write(A())
+
+        function* users(){
+            yield "Raju"
+            yield "mahesh"
+            yield "savitha"
+        }
+        
+        console.log(`User Function = `, users())
+        console.log(typeof(users()))
+
+        for (let item of users()){
+            document.write(`<h3>${item}</h3>`)
+        }
+    </script>
+</body>
+</html>

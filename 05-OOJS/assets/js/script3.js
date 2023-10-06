@@ -1,0 +1,224 @@
+
+//  let fullName_flag = false;
+// let emailId_flag = false;
+// let mobNum_flag = false;
+// let city_flag = false;
+ //let gender_flag = false;
+
+function validation(validates) {
+validates.preventDefault();
+
+    let input0_flag = false
+    let fullName_flag = false;
+    let emailId_flag = false;
+    let mobNum_flag = false;
+    let addr_flag = false;
+    // var display = document.getElementById("result");
+    let input0;
+    let fullName;
+    let emailId;
+    let mobNum;
+    let addr;
+
+
+    /* Get All the input values */
+    input0 = document.getElementById('img').value;
+    fullName = document.getElementById("fullName").value;
+    emailId = document.getElementById("emailId").value;
+    mobNum = document.getElementById("mobNum").value;
+    addr = document.getElementById("addr").value;
+
+    var output0 = document.getElementById("result0");
+
+
+
+  // Image validation
+
+    if (!input0) {
+        output0.style.color = "red";
+        output0.innerHTML = "Please select an image";
+    } else {
+        output0.style.color = "green";
+        output0.innerHTML = "Image Selected";
+
+        input0_flag = true
+    }
+
+
+    var imgInput = document.getElementById("img");
+
+
+    /* FullName Validation */
+    let fullName_regex = /^[A-Za-z]+(\s[A-Za-z]+)*$/
+
+    if (fullName.length === 0) {
+        document.getElementById("fullNameError").innerText = "Name field cannot be empty"
+        document.getElementById("fullNameError").style.color = "red"
+    } else {
+        if (fullName.length > 15) {
+            document.getElementById("fullNameError").innerText = "Exceed the limit"
+            document.getElementById("fullNameError").style.color = "orangered"
+
+        } else if (fullName_regex.test(fullName) === false) {
+            document.getElementById("fullNameError").innerText = "Invalid Full Name"
+            document.getElementById("fullNameError").style.color = "orangered"
+        } else {
+            document.getElementById("fullNameError").innerText = "Valid"
+            document.getElementById("fullNameError").style.color = "green"
+
+            fullName_flag = true
+        }
+    }
+
+ 
+    /* Email Validation */
+    let email_regex = /^\S+@\S+\.\S+$/; //Example: admin@gmail.com
+    if (emailId.length === 0) {
+        document.getElementById("emailIdError").innerText = "Email field cannot be empty"
+        document.getElementById("emailIdError").style.color = "red"
+    } else {
+        if (email_regex.test(emailId) === false) {
+            document.getElementById("emailIdError").innerText = "Invalid email"
+            document.getElementById("emailIdError").style.color = "orangered"
+        } else {
+            document.getElementById("emailIdError").innerText = "Valid"
+            document.getElementById("emailIdError").style.color = "green"
+
+            emailId_flag = true
+        }
+    }
+
+
+
+    /* Mobile Number Validation */
+    let mobNum_regex = /^[6-9]\d{9}$/; //ex
+    if (mobNum.length === 0) {
+        document.getElementById("mobNumError").innerText = "Number field cannot be empty"
+        document.getElementById("mobNumError").style.color = "red"
+    } else {
+        if (mobNum_regex.test(mobNum) === false) {
+            document.getElementById("mobNumError").innerText = "Invalid Mobile Number"
+            document.getElementById("mobNumError").style.color = "orangered"
+        } else {
+            document.getElementById("mobNumError").innerText = "Valid"
+            document.getElementById("mobNumError").style.color = "green"
+            mobNum_flag = true;
+        }
+    }
+
+    // Address validation
+    let addr_regex =  /^[A-Za-z]+(?:\s[A-Za-z]+)*$/;
+    if (addr.length === 0){
+        document.getElementById("addrError").innerText = "Address cannot be empty"
+        document.getElementById("addrError").style.color = "red"
+    } else {
+        if (addr_regex.test(addr) === false){
+            document.getElementById("addrError").innerText = "Invalid Address"
+            document.getElementById("addrError").style.color = "orangered"
+        } else {
+            document.getElementById("addrError").innerText = "Valid"
+            document.getElementById("addrError").style.color = "green"
+            addr_flag = true;
+        }
+    }
+
+
+    // validating all 
+
+//   let res = [result0, fullNameError, emailIdError, mobNumError, addrError];
+//   let count = 0
+//   for (let index = 0; index < res.length; index++) {
+//     if (res[index].style.color == "green") {
+//       count++;
+//     }
+//   }
+//   if (count == 5) {
+//     var button = document.getElementById('submit');
+//     if (button.innerHTML == "Edit") {
+//       let messages = document.getElementById('msgs');
+//       document.getElementById('container').innerHTML = '';
+
+//       details[messages.value].name = fullName;
+//       details[messages.value].email = emailId;
+//       details[messages.value].mobile = mobNum;
+//       details[messages.value].address = addr;
+//       employeeDetails();
+//       resett();
+//     } else {
+//       document.getElementById('container').innerHTML = " ";
+//       details.push({
+//         profilePic: selectedImage.src,
+//         name: fullName,
+//         email: emailId,
+//         mobile: mobNum,
+//         address: addr,
+//       });
+//       employeeDetails();
+//       resett();
+//     }
+//   } else {
+//     document.getElementById('message').innerHTML = "Please Provide Inputs and valid Information";
+//   }
+
+
+
+     
+/* if all value have true then form will submit */
+    if (!input0_flag || !fullName_flag || !emailId_flag || !mobNum_flag || !addr_flag) {
+    // console.log(input0_flag, fullName_flag, emailId_flag, mobNum_flag, addr_flag)
+    document.getElementById("submitError").innerHTML = "please enter all the required information";
+    document.getElementById("submitError").style.color = "red"
+    } else {
+
+    // console.log("submited")
+    alert("Submitted Sucessfully")
+
+    /* Intert data to pc_view_table */
+    document.getElementById("user_data_pc").innerHTML += 
+    `<tr>
+    <td>${input0}</td>
+    <td>${fullName}</td>
+    <td>${emailId}</td>
+    <td>${mobNum}</td>
+    <td>${addr}</td>
+    </tr>`
+
+
+    // /* insert data to tab_mobile_view table */
+    // document.getElementById("tab_and_mob_view").innerHTML +=
+    // `<tr>
+    //     <td>Image</td>
+    //     <td>${input0}</td>
+    // </tr>
+    // <tr>
+    //     <td>Full Name</td>
+    //     <td>${fullName}</td>
+    // </tr>
+    // <tr>
+    //     <td>Email Id</td>
+    //     <td>${emailId}</td>
+    // </tr>
+    // <tr>
+    //     <td>Mobile Number</td>
+    //     <td>${mobNum}</td>
+    // </tr>
+    // <tr>
+    //     <td>City</td>
+    //     <td>${addr}</td>
+    // </tr>`
+
+
+
+    alert("Are you sure?")
+    document.getElementById("contact-formm")/* .submit() */;
+
+    document.getElementById("contact-formm").reset();
+    document.getElementById("output0").innerText = ""
+    document.getElementById("fullNameError").innerText = ""
+    document.getElementById("emailIdError").innerText = ""
+    document.getElementById("mobNumError").innerText = ""
+    document.getElementById("addrError").innerText = ""
+    document.getElementById("submitError").innerText = ""
+
+    }
+}

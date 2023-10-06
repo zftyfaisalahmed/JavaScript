@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    </head>
+
+    <body>
+    <br>  
+    <center>
+        <h1>CONTACT LIST</h1>
+    </center>
+    <!-- Form -->
+    <div class="form_and_table container">
+        <section class="banner contact-form">
+            <center>
+
+            <form onsubmit="validation(event)" name="myForm" autocomplete="off" id="contact-form" enctype="multipart/form-data">
+                <caption>
+                <h1>Employee Details</h1>
+                </caption>
+        <br>
+                <label for="img">Select Image</label>
+                <br>
+                <input type="file" name="img" id="img" accept="image/*" onchange="displayImage()" class="nins">
+                <h3 id="result0"></h3>
+
+                <img id="selectedImage" src="" alt="Selected Image" style="display: none;">
+        <br>
+                <label for="">Username</label>
+                <br>
+                <input type="text" name="name" id="fullName" onkeyup="validateName()">
+                <h3 id="fullNameError"></h3>
+
+
+                <label for="">Email id</label>
+                <br>
+                <input type="text" name="emailId" id="emailId" onkeyup="validateEmail()">
+                <h3 id="emailIdError"></h3>
+
+
+                <label for="">Mobile Number</label>
+                <br>
+                <input type="number" name="mobNum" id="mobNum" onkeyup="validateMobNum()">
+                <h3 id="mobNumError"></h3>
+
+                <br>
+
+                <label for="addr">Address</label>
+                <br>
+                <textarea name="addr" id="addr" cols="30" rows="10" placeholder="Address" onkeyup="validateAddr()"></textarea>
+                <h3 id="addrError"></h3>
+
+
+                <button type="submit" onclick="submitFrom(event)" id="submit" id="sub-btn">Submit</button>
+                <button type="reset" onclick="resett()" id="res-btn" id="resett">Reset</button>
+
+                <!-- <input type="hidden" id="msgs"> -->
+            </form>
+            <h3 id="submitError"></h3>
+            </center>
+        </section>
+        <section class="my-tables">
+            <table class="pc_view" class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody id="user_data_pc">
+                
+            </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="assets/js/script3.js"></script>
+    </body>
+</html>

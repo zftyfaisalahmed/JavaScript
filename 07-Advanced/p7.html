@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED</title>
+</head>
+<body>  
+    <center>
+        <h1>addEventListener</h1>
+    </center>
+    <hr>
+
+    <button type="button" id="mybtn">Click me</button>
+
+    <script>
+        var btn = document.getElementById(`mybtn`)
+
+        function sayHello(){
+            alert("Hi, How are you?")
+        }
+
+        function sayBye(){
+            btn.style.background = "yellow"
+        }
+
+        function sayYes(){
+            btn.style.background = ""
+        }
+
+        btn.addEventListener("click", sayHello)
+        btn.addEventListener("mouseover", sayBye)
+        btn.addEventListener("mouseleave", sayYes)
+    </script>
+</body>
+</html>
