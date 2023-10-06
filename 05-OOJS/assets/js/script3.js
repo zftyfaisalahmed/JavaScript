@@ -8,13 +8,13 @@
 function validation(validates) {
 validates.preventDefault();
 
-    let input0_flag = false
+    let img_flag = false
     let fullName_flag = false;
     let emailId_flag = false;
     let mobNum_flag = false;
     let addr_flag = false;
     // var display = document.getElementById("result");
-    let input0;
+    let img;
     let fullName;
     let emailId;
     let mobNum;
@@ -22,7 +22,7 @@ validates.preventDefault();
 
 
     /* Get All the input values */
-    input0 = document.getElementById('img').value;
+    img = document.getElementById('img').value;
     fullName = document.getElementById("fullName").value;
     emailId = document.getElementById("emailId").value;
     mobNum = document.getElementById("mobNum").value;
@@ -34,14 +34,14 @@ validates.preventDefault();
 
   // Image validation
 
-    if (!input0) {
+    if (!img) {
         output0.style.color = "red";
         output0.innerHTML = "Please select an image";
     } else {
         output0.style.color = "green";
         output0.innerHTML = "Image Selected";
 
-        input0_flag = true
+        img_flag = true
     }
 
 
@@ -164,7 +164,7 @@ validates.preventDefault();
 
      
 /* if all value have true then form will submit */
-    if (!input0_flag || !fullName_flag || !emailId_flag || !mobNum_flag || !addr_flag) {
+    if (!img_flag || !fullName_flag || !emailId_flag || !mobNum_flag || !addr_flag) {
     // console.log(input0_flag, fullName_flag, emailId_flag, mobNum_flag, addr_flag)
     document.getElementById("submitError").innerHTML = "please enter all the required information";
     document.getElementById("submitError").style.color = "red"
@@ -174,43 +174,43 @@ validates.preventDefault();
     alert("Submitted Sucessfully")
 
     /* Intert data to pc_view_table */
-    document.getElementById("user_data_pc").innerHTML += 
-    `<tr>
-    <td>${input0}</td>
-    <td>${fullName}</td>
-    <td>${emailId}</td>
-    <td>${mobNum}</td>
-    <td>${addr}</td>
-    </tr>`
+    // document.getElementById("user_data_pc").innerHTML += 
+    // `<tr>
+    // <td>${input0}</td>
+    // <td>${fullName}</td>
+    // <td>${emailId}</td>
+    // <td>${mobNum}</td>
+    // <td>${addr}</td>
+    // </tr>`
 
 
     // /* insert data to tab_mobile_view table */
-    // document.getElementById("tab_and_mob_view").innerHTML +=
-    // `<tr>
-    //     <td>Image</td>
-    //     <td>${input0}</td>
-    // </tr>
-    // <tr>
-    //     <td>Full Name</td>
-    //     <td>${fullName}</td>
-    // </tr>
-    // <tr>
-    //     <td>Email Id</td>
-    //     <td>${emailId}</td>
-    // </tr>
-    // <tr>
-    //     <td>Mobile Number</td>
-    //     <td>${mobNum}</td>
-    // </tr>
-    // <tr>
-    //     <td>City</td>
-    //     <td>${addr}</td>
-    // </tr>`
+    document.getElementById("user_data_pc").innerHTML +=
+    ` <section class="" id="user_data_pc">
+        <div class="employee1 ">
+            <div><img src="assets/images/pic1.jpg" ${img} width="350px"></div>
+            <center id="demo7"> ${fullName}</center>
+            <div class="employee2">
+                <div class="employee3">
+                    <label for="">Email :</label> ${emailId}
+                    <input type="text" id="email7" name="email" value=""><hr>
+                    <label for="">Mobile :</label> ${mobNum}
+                    <input type="text" id="mobile" value=""><hr>
+                    <details id="demo"><summary>Address</summary> ${addr}</details>
+                </div>
+            </div>
+        </div>
+        
+        <div class="employee4">
+            <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
+            <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+    </section>`
 
 
 
     alert("Are you sure?")
-    document.getElementById("contact-formm")/* .submit() */;
+    document.getElementById("user_data_pc")/* .submit() */;
 
     document.getElementById("contact-formm").reset();
     document.getElementById("output0").innerText = ""
@@ -222,3 +222,4 @@ validates.preventDefault();
 
     }
 }
+

@@ -19,10 +19,10 @@
 
 .contact-form{
     width: fit-content;
-    height: fit-content;
+    height: 450px;
     padding: 30px;
-    background-color: gray;
-    border: 1.5px solid black;
+    /* background-color: gray; */
+    /* border: 1.5px solid black; */
     
 }
 
