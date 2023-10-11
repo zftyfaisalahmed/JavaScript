@@ -20,7 +20,7 @@ let details = [{
 },
 {
     name: "Brazil",
-    states: ["Parana", "Ceara", "Sao Paulo", "Santa", "Sao  "]
+    states: ["Parana", "Ceara", "Sao Paulo", "Santa", "Sao"]
 }];
 
 document.getElementById('countries').addEventListener('change', show);

@@ -1,9 +1,8 @@
-
 //  let fullName_flag = false;
 // let emailId_flag = false;
 // let mobNum_flag = false;
 // let city_flag = false;
- //let gender_flag = false;
+//let gender_flag = false;
 
 function validation(validates) {
 validates.preventDefault();
@@ -13,7 +12,9 @@ validates.preventDefault();
     let emailId_flag = false;
     let mobNum_flag = false;
     let addr_flag = false;
+
     // var display = document.getElementById("result");
+
     let img;
     let fullName;
     let emailId;
@@ -32,7 +33,7 @@ validates.preventDefault();
 
 
 
-  // Image validation
+    // Image validation
 
     if (!img) {
         output0.style.color = "red";
@@ -55,7 +56,7 @@ validates.preventDefault();
         document.getElementById("fullNameError").innerText = "Name field cannot be empty"
         document.getElementById("fullNameError").style.color = "red"
     } else {
-        if (fullName.length > 15) {
+        if (fullName.length <= 3) {
             document.getElementById("fullNameError").innerText = "Exceed the limit"
             document.getElementById("fullNameError").style.color = "orangered"
 
@@ -125,47 +126,46 @@ validates.preventDefault();
 
     // validating all 
 
-//   let res = [result0, fullNameError, emailIdError, mobNumError, addrError];
-//   let count = 0
-//   for (let index = 0; index < res.length; index++) {
-//     if (res[index].style.color == "green") {
-//       count++;
-//     }
-//   }
-//   if (count == 5) {
-//     var button = document.getElementById('submit');
-//     if (button.innerHTML == "Edit") {
-//       let messages = document.getElementById('msgs');
-//       document.getElementById('container').innerHTML = '';
+    //   let res = [result0, fullNameError, emailIdError, mobNumError, addrError];
+    //   let count = 0
+    //   for (let index = 0; index < res.length; index++) {
+    //     if (res[index].style.color == "green") {
+    //       count++;
+    //     }
+    //   }
+    //   if (count == 5) {
+    //     var button = document.getElementById('submit');
+    //     if (button.innerHTML == "Edit") {
+    //       let messages = document.getElementById('msgs');
+    //       document.getElementById('container').innerHTML = '';
 
-//       details[messages.value].name = fullName;
-//       details[messages.value].email = emailId;
-//       details[messages.value].mobile = mobNum;
-//       details[messages.value].address = addr;
-//       employeeDetails();
-//       resett();
-//     } else {
-//       document.getElementById('container').innerHTML = " ";
-//       details.push({
-//         profilePic: selectedImage.src,
-//         name: fullName,
-//         email: emailId,
-//         mobile: mobNum,
-//         address: addr,
-//       });
-//       employeeDetails();
-//       resett();
-//     }
-//   } else {
-//     document.getElementById('message').innerHTML = "Please Provide Inputs and valid Information";
-//   }
+    //       details[messages.value].name = fullName;
+    //       details[messages.value].email = emailId;
+    //       details[messages.value].mobile = mobNum;
+    //       details[messages.value].address = addr;
+    //       employeeDetails();
+    //       resett();
+    //     } else {
+    //       document.getElementById('container').innerHTML = " ";
+    //       details.push({
+    //         profilePic: selectedImage.src,
+    //         name: fullName,
+    //         email: emailId,
+    //         mobile: mobNum,
+    //         address: addr,
+    //       });
+    //       employeeDetails();
+    //       resett();
+    //     }
+    //   } else {
+    //     document.getElementById('message').innerHTML = "Please Provide Inputs and valid Information";
+    //   }
 
 
 
      
-/* if all value have true then form will submit */
+    /* if all value have true then form will submit */
     if (!img_flag || !fullName_flag || !emailId_flag || !mobNum_flag || !addr_flag) {
-    // console.log(input0_flag, fullName_flag, emailId_flag, mobNum_flag, addr_flag)
     document.getElementById("submitError").innerHTML = "please enter all the required information";
     document.getElementById("submitError").style.color = "red"
     } else {
@@ -186,9 +186,9 @@ validates.preventDefault();
 
     // /* insert data to tab_mobile_view table */
     document.getElementById("user_data_pc").innerHTML +=
-    ` <section class="" id="user_data_pc">
+    `<section class="" id="user_data_pc">
         <div class="employee1 ">
-            <div><img src="assets/images/pic1.jpg" ${img} width="350px"></div>
+            <div><img src="assets/images/pic2.jpg" ${img} width="350px"></div>
             <center id="demo7"> ${fullName}</center>
             <div class="employee2">
                 <div class="employee3">
@@ -223,3 +223,14 @@ validates.preventDefault();
     }
 }
 
+
+function editEmployee() {
+    alert('Edit button clicked');
+}
+      
+function deleteEmployee() {
+      const confirmed = confirm('Are you sure you want to delete this employee?');
+  if (confirmed) {  
+      alert("Employee detailes deleted", document.getElementById("user_data_pc").innerHTML = " ");
+  }
+}

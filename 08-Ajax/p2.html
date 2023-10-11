@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <center>
+        <h1>PROMISES</h1>
+    </center>
+    <hr>
+
+    <h3>What is Promises?</h3>
+    <p>Promises is built in constructor of JavaScript</p>
+    <p>A promises object represent an operation which has produced or will eventually produce a value. promises provide a robust way to wrap the (possibly pendind) result of asynchrous request.</p>
+
+    <h3>States of promises</h3>
+    <h5>1. Pending</h5>
+    <p>The underlying operation has not yet completed or neither rejected</p>
+
+    <script>
+        let x = 199;
+
+        const myResponse = new Promise(function(resolved, reject){
+            if (x<100){
+                resolved("Hi welcome to new promises")
+            } else {
+                reject ("Oops Sorry! rejected")
+            }
+        });
+        
+        myResponse.then(function(value){
+            alert(value)
+        }).catch(function(error){
+            alert(error)
+        })
+    </script>
+</body>
+</html>

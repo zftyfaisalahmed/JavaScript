@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <center><h1>PROMISES</h1></center>
+    <hr>
+
+    <div id="git"></div>
+    <p id="git1"></p>
+    <div id="git2"></div>
+    <script>
+        fetch("assets/js/user.json")
+        .then(res => res.json())
+        .then(resilt => {
+            fetch(`https://api.github.com/users/${resilt.name}`)
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+
+                let img = document.createElement("img")
+                img.src = result.avatar_url
+                let block = document.querySelector("#git")
+                block.appendChild(img)
+
+                let bio = document.createElement("bio")
+                bio.innerHTML = result.bio
+                let block1 = document.querySelector("#git1")
+                block1.appendChild(bio)
+
+                let blog = document.createElement("blog")
+                blog.innerHTML = result.blog
+                let block2 = document.querySelector("#git2")
+                block2.appendChild(blog)
+            })
+        })
+        .catch(err=> {err})
+    </script>
+</body>
+</html>
