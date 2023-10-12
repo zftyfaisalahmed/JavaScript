@@ -1,0 +1,54 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background: url(../images/world-map-continents-oceans.webp)no-repeat center;
+    background-size: cover;
+    /* height: 100vh; */
+}
+.banner{
+    text-align: center;
+    margin: 10px auto;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    border: 2px solid white;
+    background-color: rgba(166, 175, 180, 0.3);
+    border-radius: 20px;
+}
+div{
+    background-color: rgba(64, 68, 70, 0.7);
+    width: fit-content;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 10px; 
+    margin: 20px auto;
+    transition: 1s;
+}
+div:hover{
+    background-color: transparent;
+}
+div>option{
+    outline: none;
+}
+select{
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    /* color: teal; */
+}
+h1{
+    font-size: 40px;
+    background-color: rgba(64, 68, 70, 0.5);
+    padding: 20px;
+    /* color: white; */
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: 1s;
+}
+h1:hover{
+    background-color: transparent;
+}

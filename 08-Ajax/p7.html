@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <style>
+        #container{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+        }
+        div{
+            width: 250px;
+            padding: 10px;
+            /* object-fit: cover; */
+            border: 1px solid #222;
+            margin: 5px;
+        }
+        div img{
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Fetch method</h3>
+
+    <section id="container"></section>
+
+    <script>
+        const url = "https://dummyjson.com";
+
+            fetch(`${url}/products`,{
+                method : "GET"
+            })
+            .then(out => out.json())
+            .then(res => {
+                console.log(`response = `,res.products);
+                printData(res.products)
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+
+            function printData(products){
+                let container = document.querySelector("#container")
+
+                products.forEach(element => {
+                    let card = document.createElement("div");
+
+                    let title = document.createElement("h4")
+                    let pric = document.createElement("p")
+                    let image = document.createElement("img")
+
+                    title.textContent = element.title
+                    image.src = element.thumbnail;
+                    pric.innerHTML = `<strong>Price = &#8377; ${element.pric}</strong>`
+
+                    card.appendChild(title)
+                    card.appendChild(image)
+                    card.appendChild(pric)
+                    
+
+                    container.appendChild(card)
+                });
+            }
+    </script>
+</body>
+</html>

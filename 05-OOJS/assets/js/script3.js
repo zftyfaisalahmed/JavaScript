@@ -7,11 +7,11 @@
 function validation(validates) {
 validates.preventDefault();
 
-    let img_flag = false
-    let fullName_flag = false;
-    let emailId_flag = false;
-    let mobNum_flag = false;
-    let addr_flag = false;
+    // let img_flag = false
+    // let fullName_flag = false;
+    // let emailId_flag = false;
+    // let mobNum_flag = false;
+    // let addr_flag = false;
 
     // var display = document.getElementById("result");
 
@@ -27,7 +27,7 @@ validates.preventDefault();
     fullName = document.getElementById("fullName").value;
     emailId = document.getElementById("emailId").value;
     mobNum = document.getElementById("mobNum").value;
-    addr = document.getElementById("addr").value;
+    addr = document.getElementById("addr1").value;
 
     var output0 = document.getElementById("result0");
 
@@ -41,12 +41,14 @@ validates.preventDefault();
     } else {
         output0.style.color = "green";
         output0.innerHTML = "Image Selected";
+    // clearInputs()    
 
-        img_flag = true
+        // img_flag = true
     }
+    // clearInputs()
 
 
-    var imgInput = document.getElementById("img");
+    // var imgInput = document.getElementById("img");
 
 
     /* FullName Validation */
@@ -67,7 +69,7 @@ validates.preventDefault();
             document.getElementById("fullNameError").innerText = "Valid"
             document.getElementById("fullNameError").style.color = "green"
 
-            fullName_flag = true
+            // fullName_flag = true
         }
     }
 
@@ -85,7 +87,7 @@ validates.preventDefault();
             document.getElementById("emailIdError").innerText = "Valid"
             document.getElementById("emailIdError").style.color = "green"
 
-            emailId_flag = true
+            // emailId_flag = true
         }
     }
 
@@ -103,7 +105,7 @@ validates.preventDefault();
         } else {
             document.getElementById("mobNumError").innerText = "Valid"
             document.getElementById("mobNumError").style.color = "green"
-            mobNum_flag = true;
+            // mobNum_flag = true;
         }
     }
 
@@ -119,9 +121,10 @@ validates.preventDefault();
         } else {
             document.getElementById("addrError").innerText = "Valid"
             document.getElementById("addrError").style.color = "green"
-            addr_flag = true;
+            // addr_flag = true;
         }
     }
+    clearInputs()
 
 
     // validating all 
@@ -165,9 +168,11 @@ validates.preventDefault();
 
      
     /* if all value have true then form will submit */
-    if (!img_flag || !fullName_flag || !emailId_flag || !mobNum_flag || !addr_flag) {
+    if (!img || !fullName || !emailId || !mobNum || !addr) {
     document.getElementById("submitError").innerHTML = "please enter all the required information";
     document.getElementById("submitError").style.color = "red"
+    // clearInputs()
+    
     } else {
 
     // console.log("submited")
@@ -185,7 +190,7 @@ validates.preventDefault();
 
 
     // /* insert data to tab_mobile_view table */
-    document.getElementById("user_data_pc").innerHTML +=
+    let ele = document.getElementById("user_data_pc").innerHTML +=
     `<section class="" id="user_data_pc">
         <div class="employee1 ">
             <div><img src="assets/images/pic2.jpg" ${img} width="350px"></div>
@@ -202,8 +207,8 @@ validates.preventDefault();
         </div>
         
         <div class="employee4">
-            <button type="button" id="edit" class="edit" onclick="editEmployee()"><i class="fa-solid  fa-pen"></i></button>
-            <button type="button" id="delet" class="delet" onclick="deleteEmployee()"><i class="fa-solid fa-trash-can"></i></button>
+            <button type="button" id="edit" class="edit" onclick="editEmployee(this)"><i class="fa-solid  fa-pen"></i></button>
+            <button type="button" id="delet" class="delet" onclick="deleteEmployee(this)"><i class="fa-solid fa-trash-can"></i></button>
         </div>
     </section>`
 
@@ -221,11 +226,44 @@ validates.preventDefault();
     document.getElementById("submitError").innerText = ""
 
     }
+
+    // clearInputs()
 }
+// clearInputs()
 
 
-function editEmployee() {
-    alert('Edit button clicked');
+function editEmployee(button){
+    // alert('Edit button clicked');
+    // Get the parent row of the clicked button 
+    let row = button.ele.innerHTML 
+
+    // Get the cells within the row 
+    let nameCell = row.fullName.value; 
+    let emailCell = row.emailId.value; 
+    let mobileCell = row.mobNum.value; 
+    let addressCell = row.addr.value; 
+    
+    // Prompt the user to enter updated values 
+    let fullName = 
+        prompt("Enter the updated name:", 
+            nameCell.innerHTML); 
+    let emailId = 
+        prompt("Enter the updated email:", 
+            emailCell.innerHTML); 
+    let mobNum = 
+        prompt("Enter the updated mobile details:", 
+            mobileCell.innerHTML 
+        ); 
+    let addr = 
+        prompt("Enter the updated address:", 
+            addressCell.innerHTML 
+        ); 
+    
+    // Update the cell contents with the new values 
+    nameCell.innerHTML = fullName; 
+    emailCell.innerHTML = emailId; 
+    mobileCell.innerHTML = mobNum; 
+    addressCell.innerHTML = addr; 
 }
       
 function deleteEmployee() {
@@ -233,4 +271,15 @@ function deleteEmployee() {
   if (confirmed) {  
       alert("Employee detailes deleted", document.getElementById("user_data_pc").innerHTML = " ");
   }
+}
+
+
+function clearInputs() { 
+            
+    // Clear input fields 
+    document.getElementById("fullName").value = ""; 
+    document.getElementById("emailId").value = ""; 
+    document.getElementById("mobNum").value = ""; 
+    document.getElementById("addr1").value = ""; 
+    document.getElementById("img").value = ""; 
 }

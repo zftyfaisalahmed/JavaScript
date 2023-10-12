@@ -33,30 +33,30 @@
         <br>
                 <label for="">Username</label>
                 <br>
-                <input type="text" name="name" id="fullName" onkeyup="validateName()">
+                <input type="text" name="name" id="fullName">
                 <h3 id="fullNameError"></h3>
 
 
                 <label for="">Email id</label>
                 <br>
-                <input type="text" name="emailId" id="emailId" onkeyup="validateEmail()">
+                <input type="text" name="emailId" id="emailId">
                 <h3 id="emailIdError"></h3>
 
 
                 <label for="">Mobile Number</label>
                 <br>
-                <input type="number" name="mobNum" id="mobNum" onkeyup="validateMobNum()">
+                <input type="number" name="mobNum" id="mobNum">
                 <h3 id="mobNumError"></h3>
 
                 <br>
 
                 <label for="addr">Address</label>
                 <br>
-                <textarea name="addr" id="addr" cols="30" rows="10" placeholder="Address" onkeyup="validateAddr()"></textarea>
+                <textarea name="addr" id="addr1" cols="30" rows="10" placeholder="Address" onkeyup="validateAddr()"></textarea>
                 <h3 id="addrError"></h3>
 
 
-                <button type="submit" onclick="submitFrom(event)" id="submit" id="sub-btn">Submit</button>
+                <button type="submit" onclick="submitFrom()" id="submit" id="sub-btn">Submit</button>
                 <button type="reset" onclick="resett()" id="res-btn" id="resett">Reset</button>
 
                 <!-- <input type="hidden" id="msgs"> -->
