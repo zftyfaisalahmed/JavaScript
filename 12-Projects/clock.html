@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@700&family=Chakra+Petch&family=Nunito:wght@200&family=Source+Code+Pro&display=swap');
+
+            #clockContainer {
+                position: relative;
+                margin: auto;
+                height: 40vw;
+                /*to make the height and width responsive*/
+                width: 40vw;
+                background: url(../12-Projects/EXCHANGE-RATE/assets/images/387698177_1326782518205428_7623155627319012815_n.jpeg) no-repeat;
+                /* background: url(../12-Projects/EXCHANGE-RATE/assets/images/clock.png) no-repeat; */
+                /*setting our background image*/
+                background-size: 100%;
+                align-items: center;
+            }
+
+            #hour,
+            #minute,
+            #second {
+                position: absolute;
+                background: rgb(10, 9, 9);
+                border-radius: 10px;
+                transform-origin: bottom;
+            }
+
+            #hour {
+                width: 1.8%;
+                height: 20%;
+                top: 29%;
+                left: 48.85%;
+                opacity: 0.6;
+                background-color: aliceblue;
+            }
+            .clock-img1{
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                top: 20%;
+                left: 0;
+                color: rgb(239, 238, 241);
+                font-size: 20px;
+            }
+            #minute {
+                width: 1.6%;
+                height: 30%;
+                top: 19%;
+                left: 48.9%;
+                opacity: 0.6;
+                background-color: aliceblue;
+            }
+
+            #second {
+                width: 1%;
+                height: 35%;
+                top: 14.5%;
+                left: 49.25%;
+                opacity: 0.6;
+                background-color: aliceblue;
+            }
+            html {
+                background: rgb(186, 187, 181);
+                text-align: center;
+                font-size: 10px;
+            }
+
+            body {
+                margin: 0;
+                font-size: 2rem;
+                display: flex;
+                flex: 1;
+                min-height: 100vh;
+                align-items: center;
+            }
+            .clock-img img {
+                width: 100%;
+                height: 100%;
+                /* position: absolute;
+                top: -1%;
+                left: 0%; */
+            }
+            
+            .clock {
+                width: 30rem;
+                height: 30rem;
+                position: relative;
+                padding: 2rem;
+                border: 7px solid #282828;
+                box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                                inset 4px 4px 10px rgba(0,0,0,0.5),
+                                inset -4px -4px 10px rgba(67,67,67,0.5),
+                                4px 4px 10px rgba(0,0,0,0.3);
+                border-radius: 50%;
+                margin: 50px auto;
+            }
+            .cirle{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background-color: white;
+                position: absolute;
+                top: 46%;
+                left: 48.5%;
+                background: url(../12-Projects/EXCHANGE-RATE/assets/images/download.png);
+            }
+            .aaaas{
+                border-radius: 50%;
+                box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                                inset 4px 4px 10px rgba(0,0,0,0.5),
+                                inset -4px -4px 10px rgba(67,67,67,0.5),
+                                4px 4px 10px rgba(0,0,0,0.3);
+                height: 300px;
+                width: 300px;
+                position: absolute;
+                top: 24%;
+                left: 25%;
+            }
+           
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="clockContainer" class="clock">
+            <!-- <div class="circle"></div> -->
+            <div class="clock-img">
+                <img src="../12-Projects/EXCHANGE-RATE/assets/images/clock.png" alt="">
+            </div> 
+            <div class="clock-img1">
+                <h2>TITAN</h2>
+            </div>   
+            <div class="aaaas"></div>
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div> 
+        <div class="cirle"></div>
+
+        <script>
+            setInterval(() => {
+                d = new Date(); //object of date()
+                hr = d.getHours();
+                min = d.getMinutes();
+                sec = d.getSeconds();
+                hr_rotation = 30 * hr + min / 2; //converting current time
+                min_rotation = 6 * min;
+                sec_rotation = 6 * sec;
+
+                hour.style.transform = `rotate(${hr_rotation}deg)`;
+                minute.style.transform = `rotate(${min_rotation}deg)`;
+                second.style.transform = `rotate(${sec_rotation}deg)`;
+            }, 1000);
+        </script>    
+    </body>
+</html>
