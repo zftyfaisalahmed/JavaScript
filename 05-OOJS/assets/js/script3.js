@@ -7,11 +7,11 @@
 function validation(validates) {
 validates.preventDefault();
 
-    // let img_flag = false
-    // let fullName_flag = false;
-    // let emailId_flag = false;
-    // let mobNum_flag = false;
-    // let addr_flag = false;
+    let img_flag = false
+    let fullName_flag = false;
+    let emailId_flag = false;
+    let mobNum_flag = false;
+    let addr_flag = false;
 
     // var display = document.getElementById("result");
 
@@ -43,7 +43,7 @@ validates.preventDefault();
         output0.innerHTML = "Image Selected";
     // clearInputs()    
 
-        // img_flag = true
+        img_flag = true
     }
     // clearInputs()
 
@@ -69,7 +69,7 @@ validates.preventDefault();
             document.getElementById("fullNameError").innerText = "Valid"
             document.getElementById("fullNameError").style.color = "green"
 
-            // fullName_flag = true
+            fullName_flag = true
         }
     }
 
@@ -87,7 +87,7 @@ validates.preventDefault();
             document.getElementById("emailIdError").innerText = "Valid"
             document.getElementById("emailIdError").style.color = "green"
 
-            // emailId_flag = true
+            emailId_flag = true
         }
     }
 
@@ -105,7 +105,7 @@ validates.preventDefault();
         } else {
             document.getElementById("mobNumError").innerText = "Valid"
             document.getElementById("mobNumError").style.color = "green"
-            // mobNum_flag = true;
+            mobNum_flag = true;
         }
     }
 
@@ -121,7 +121,7 @@ validates.preventDefault();
         } else {
             document.getElementById("addrError").innerText = "Valid"
             document.getElementById("addrError").style.color = "green"
-            // addr_flag = true;
+            addr_flag = true;
         }
     }
     clearInputs()

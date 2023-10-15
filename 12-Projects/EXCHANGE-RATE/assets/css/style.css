@@ -21,7 +21,7 @@
 }
 @keyframes rotateImg {
     from{transform: rotate(0deg);}
-    to{transform: rotate(4360deg);}
+    to{transform: rotate(360deg);}
 }
 .title>h1{
     color: rgb(77, 124, 124)yan;
