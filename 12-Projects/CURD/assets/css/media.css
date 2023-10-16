@@ -1,0 +1,14 @@
+/* MOBILE  */
+@media(max-width: 768px){
+    .container{
+        flex-flow: column;
+    }
+    .container h1{
+        font-size: 30px;
+    }
+}
+
+/* TABLET */
+@media(min-width: 769px) and (max-width: 1200px){
+
+}
