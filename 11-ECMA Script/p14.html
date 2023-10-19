@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>Map() constructor</h1>
+        </center>
+
+        <p>A Map is constructor (basic mapping of key and values),</p>
+        <p>maps are differnt than an object in that their keys can be anything (primitive values as well as object) not just strings and symbols</p>
+
+        <script>
+            var x = new Map();
+
+            x.set("id", 1234);
+            x.set("name", "javascript")
+            x.set("email", "java@gmail.com")
+            x.set("isEnable" , true)
+
+            console.log(x)
+
+            console.log(`id = `, x.get("id"))
+            console.log(`email = `, x.get("email"))
+            console.log(`nmae= `, x.get("name"))
+
+            document.write(`<h3> ${x.get("name")}</h3>`)
+        </script>
+    </body>
+</html>

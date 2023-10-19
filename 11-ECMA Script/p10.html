@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>Array join -> literal array</h1>
+        </center>
+        <hr>
+
+        <script>
+            let c1 = ['html','css','javascript','react']
+            let c2 = ['node','express','jqureay','mongodb']
+            let c3 = ['html',...c1,'javascript',...c2]
+
+            document.write(`<h1>c1 = ${c1}</h1>`)
+            document.write(`<h1>c2 = ${c2}</h1>`)
+            document.write(`<h1>c3 = ${c3}</h1>`)
+        </script>
+    </body>
+</html>

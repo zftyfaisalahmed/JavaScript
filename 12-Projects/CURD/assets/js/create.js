@@ -5,9 +5,7 @@ let userProfile= document.getElementById("profile");
 let userGender= document.getElementsByName("gender");
 let selGender = " ";
 
-let users = localStorage.getItem("userinfo")
-    ? JSON.parse(localStorage.getItem("userinfo"))
-    : []
+let users = localStorage.getItem("userinfo") ? JSON.parse(localStorage.getItem("userinfo")) : []
 
 // to generate random id - arrow function
 const genRanId = () => {
@@ -43,8 +41,8 @@ function createUser(user) {
         alert("user email already registered")
     }else{
 
-    localStorage.setItem("userInfo", JSON.stringify(user));
-    alert("new details created successfully")
-    window.location.href = "../CURD/index.html";
-}
+        localStorage.setItem("userInfo", JSON.stringify(user));
+        alert("new details created successfully")
+        window.location.href = "../CURD/index.html";
+    }
 }

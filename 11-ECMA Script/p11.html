@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>Array Join -> object array</h1>
+        </center>
+        <hr>
+
+        <script>
+            let c1 = [
+                {
+                    id : 123,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                },
+                {
+                    id : 13,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                },
+                {
+                    id : 12,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                }
+            ]
+            let c2 = [
+                {
+                    id : 223,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                },
+                {
+                    id : 23,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                },
+                {
+                    id : 22,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                }
+            ]
+            let c3 = [
+                {
+                    id : 323,
+                    name : "manoj",
+                    email : "monaj@gmail.com"
+                },
+                ...c1,
+                ...c2
+            ]
+
+            console.log(`c1 ${c1}`)
+            console.log(`c2 ${c2}`)
+            console.log(`c3 ${c3}`)
+            
+
+            // document.write(`c1 ${c1}`)
+        </script>
+    </body>
+</html>

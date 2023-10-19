@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>Rest Operator</h1>
+        </center>
+        <hr>
+
+        <script>
+            let sum = 0;
+
+            function sumOfDigit(...num){ // ... is called rest operator
+                document.write(`<h1>num = ${num}</h1>`)
+
+                num.forEach(item => {
+                    sum += item
+                })
+
+                document.write(`<h1>Sum of (12,43,524,243,4332,2,3,234,5,243,4243,243,67,6,645,234,765) = ${sum}</h1>`)
+            }
+
+            sumOfDigit(12,43,524,243,4332,2,3,234,5,243,4243,243,67,6,645,234,765)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>ECMA Script-5 class</h1>
+        </center>
+        <hr>
+        
+        <script>
+            function User(){
+                this.anme = "raju"
+                this.print = function(){
+                    document.write(`<h1> Hi ${this.anme}, welcon to the world of lies</h1>`)
+                },
+                this.sayHI = function(){
+                    document.write(`<h1>say hi to ${this.anme}</h1>`)
+                }
+            }
+
+            let y = new User()
+            // y.this.anme
+            y.print()
+            y.sayHI()
+        </script>
+    </body>
+</html>
