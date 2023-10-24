@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA</title>
+    </head>
+    <body>
+        <center>
+            <h1>Object.assign()</h1>
+        </center>
+        <hr>
+
+        <script>
+            "use strict"
+
+            var x = {
+                name : "toyata",
+                id : 3456789
+            }
+
+            var y = Object.assign({}, x)
+
+            console.log(`y object = ${y}`)
+
+            for(let item in y){
+                console.log(`${item} : ${y[item]}`)
+            }
+        </script>
+    </body>
+</html>

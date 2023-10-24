@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Map() constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        var x = new Map();
+
+        x.set("id", 1234)
+        x.set("email", "java2gmail.com")
+        console.log(`set x = ${x}`)
+
+        for(let item of x){
+            console.log("Key", item)
+        }
+
+        for (let [key , val] of x){
+           document.write(`key = ${key} and value = ${val} <br>`)
+           console.log(`${key} and ${val}`)
+        }
+    </script>
+</body>
+</html>
